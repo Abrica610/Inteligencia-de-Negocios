@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Ciclo de Vida de los Datos | Inteligencia de Negocios</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Navegación */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #34495e;
+        }
+
+        /* Secciones */
+        section {
+            padding: 80px 20px 40px; /* Padding top para compensar el menú fijo */
+            max-width: 900px;
+            margin: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        h1, h2 {
+            color: #2980b9;
+        }
+        
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        /* Botón de retorno */
+        .btn-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #2980b9;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-top:hover {
+            background: #1f6391;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#etl">Proceso ETL</a></li>
+                <li><a href="#almacen">Almacén de Datos</a></li>
+                <li><a href="#explotacion">Explotación y Herramientas</a></li>
+                <li><a href="#mineria">Minería de Datos</a></li>
+                <li><a href="#cierre">Reflexiones y Referencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 01 Inicio -->
+    <section id="inicio">
+        <h1>Inteligencia de Negocios: El Viaje de los Datos</h1>
+        <h2>Propósito del sitio</h2>
+        <p>Explicar de manera clara y estructurada el ciclo de vida de los datos empresariales, desde su extracción inicial hasta su transformación en conocimiento estratégico mediante herramientas de Inteligencia de Negocios (BI) y Minería de Datos.</p>
+        
+        <h2>Equipo de trabajo</h2>
+        <ul>
+            <li><strong>Integrante 1:</strong> [Nombre y Aportación]</li>
+            <li><strong>Integrante 2:</strong> [Nombre y Aportación]</li>
+        </ul>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <!-- 02 Proceso ETL -->
+    <section id="etl">
+        <h2>Proceso ETL</h2>
+        <p><strong>ETL (Extract, Transform, Load)</strong> es el proceso automatizado que integra datos de múltiples fuentes, los limpia y los prepara para su almacenamiento.</p>
+        <ul>
+            <li><strong>Extracción:</strong> Recopilación de datos desde bases de datos, APIs, archivos CSV, etc.</li>
+            <li><strong>Transformación:</strong> Limpieza, normalización y validación de los datos.</li>
+            <li><strong>Carga:</strong> Inserción de los datos en el almacén de datos (Data Warehouse).</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Un supermercado extrae las ventas de las cajas, estandariza los formatos de fecha y moneda (transformación), y los envía a un servidor central cada noche (carga).</p>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <!-- 03 Almacén de Datos -->
+    <section id="almacen">
+        <h2>Almacén de Datos (Data Warehouse)</h2>
+        <p>Un repositorio centralizado diseñado para almacenar grandes volúmenes de datos históricos provenientes de múltiples fuentes, optimizado para consultas analíticas veloces (OLAP).</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Almacén</th>
+                    <th>Definición</th>
+                    <th>Alcance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Enterprise Data Warehouse (EDW)</strong></td>
+                    <td>Repositorio central de toda la organización.</td>
+                    <td>Global (Toda la empresa)</td>
+                </tr>
+                <tr>
+                    <td><strong>Operational Data Store (ODS)</strong></td>
+                    <td>Base de datos para reportes operativos casi en tiempo real.</td>
+                    <td>Operativo / Corto plazo</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Mart</strong></td>
+                    <td>Subconjunto del almacén enfocado en un área específica.</td>
+                    <td>Departamental (Ej. Marketing)</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <!-- 04 Explotación -->
+    <section id="explotacion">
+        <h2>Explotación y Herramientas</h2>
+        <p>Es la etapa donde los datos almacenados se convierten en decisiones a través de dashboards y reportes automáticos.</p>
+        <ul>
+            <li><strong>Integración (ETL):</strong> Talend, Informatica PowerCenter.</li>
+            <li><strong>Almacenamiento:</strong> Amazon Redshift, Snowflake, Google BigQuery.</li>
+            <li><strong>Análisis y Visualización (BI):</strong> Power BI, Tableau, Qlik Sense.</li>
+            <li><strong>Minería de Datos:</strong> RapidMiner, KNIME, Python.</li>
+        </ul>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <!-- 05 Minería -->
+    <section id="mineria">
+        <h2>Minería de Datos (Data Mining)</h2>
+        <p>El proceso de analizar grandes conjuntos de información para descubrir patrones, correlaciones y tendencias ocultas utilizando IA y Machine Learning.</p>
+        <ul>
+            <li><strong>Clasificación:</strong> Asignar datos a categorías predefinidas (Ej. Spam / No Spam).</li>
+            <li><strong>Agrupamiento (Clustering):</strong> Segmentar datos similares (Ej. Segmentación de clientes).</li>
+            <li><strong>Asociación:</strong> Reglas de compra (Ej. "Si compra pan, compra leche").</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Netflix analiza el historial de miles de usuarios (clustering) para recomendar series precisas a nuevos usuarios.</p>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <!-- 06 Cierre -->
+    <section id="cierre">
+        <h2>Reflexiones y Referencias</h2>
+        
+        <h3>Reflexiones</h3>
+        <p><strong>[Tu Nombre]:</strong> Comprendí que el BI no es solo hacer gráficos, sino que depende de una base sólida de extracción y transformación.</p>
+        
+        <h3>Referencias (APA 7.ª ed.)</h3>
+        <ul>
+            <li>Inmon, W. H. (2005). <em>Building the Data Warehouse</em> (4.ª ed.). Wiley.</li>
+            <li>Kimball, R., & Ross, M. (2013). <em>The Data Warehouse Toolkit</em> (3.ª ed.). Wiley.</li>
+        </ul>
+        <a href="#inicio" class="btn-top">Volver arriba ↑</a>
+    </section>
+
+    <footer>
+        <p>Proyecto Universitario | Inteligencia de Negocios | 2024</p>
+    </footer>
+
+</body>
+</html>
